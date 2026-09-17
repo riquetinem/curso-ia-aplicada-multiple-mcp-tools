@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node --env-file .env src/index.ts",
     "dev": "node --watch --inspect --env-file .env src/index.ts",
-    "langgraph:serve": "npx @langchain/langgraph-cli dev",
+    "langgraph:serve": "npx @langchain/langgraph-cli dev --host 0.0.0.0 --no-browser",
     "docker:infra:up": "docker compose up -d --wait",
     "docker:infra:down": "docker compose down",
     "docker:infra:cleanup": "docker compose down --volumes --remove-orphans && rm -rf storage",
