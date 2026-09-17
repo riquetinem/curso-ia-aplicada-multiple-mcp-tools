@@ -21,8 +21,13 @@ export const config: ModelConfig = {
   apiKey: process.env.OPENROUTER_API_KEY!,
   httpReferer: '',
   xTitle: 'IA Devs - Transforming Services into Tools',
+  // OpenRouter usa este array como cadeia de fallback: se o primeiro modelo
+  // estiver sobrecarregado (503) ou fora do ar (404), cai para o proximo.
+  // Todos suportam tools + structured_outputs, exigidos por generateStructured.
   models: [
-    'arcee-ai/trinity-large-preview:free',
+    'dots-studio/dots-3-note-preview:free',
+    'nex-agi/nex-n2.5-pro:free',
+    'nvidia/nemotron-3-super-120b-a12b:free',
   ],
   provider: {
     sort: {
