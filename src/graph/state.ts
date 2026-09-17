@@ -11,6 +11,8 @@ export const GraphAnnotation =  z.object({
     intent: z.string().optional(),
     fileContent: z.string().optional(),
     fileName: z.string().optional(),
+    fileType: z.enum(['csv', 'json', 'unknown']).optional(),
+    collection: z.string().optional(),
 
     error: z.string().optional(),
 });

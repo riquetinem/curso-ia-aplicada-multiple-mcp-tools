@@ -25,9 +25,9 @@ export const config: ModelConfig = {
   // estiver sobrecarregado (503) ou fora do ar (404), cai para o proximo.
   // Todos suportam tools + structured_outputs, exigidos por generateStructured.
   models: [
-    'dots-studio/dots-3-note-preview:free',
     'nex-agi/nex-n2.5-pro:free',
     'nvidia/nemotron-3-super-120b-a12b:free',
+    'dots-studio/dots-3-note-preview:free',
   ],
   provider: {
     sort: {
@@ -36,5 +36,5 @@ export const config: ModelConfig = {
     },
   },
   temperature: 0.7,
-  maxTokens: 2048,
+  maxTokens: 4096,
 };

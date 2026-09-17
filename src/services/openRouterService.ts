@@ -6,7 +6,7 @@ import { getMCPTools } from './mcpService.ts';
 import { z } from 'zod/v3';
 import { type ChatGeneration } from '@langchain/core/outputs';
 
-export class OpenRouterService {
+export class OpenRouterService { 
     private config: ModelConfig;
     private llmClient: ChatOpenAI;
     private tools: any[];
